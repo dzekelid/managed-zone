@@ -1,9 +1,10 @@
+---
 swagger: "2.0"
 x-collection-name: Google Cloud DNS
-x-complete: 1
+x-complete: 0
 info:
-  title: Google Cloud DNS
-  description: configures-and-serves-authoritative-dns-records-
+  title: Google Cloud DNS API Get Managed Zone Resources
+  description: Enumerate ResourceRecordSets that have been created but not yet deleted.
   contact:
     name: Google
     url: https://google.com
@@ -198,3 +199,17 @@ paths:
           description: OK
       tags:
       - Managed Zone
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---

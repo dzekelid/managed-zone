@@ -1,9 +1,10 @@
+---
 swagger: "2.0"
 x-collection-name: Google Cloud DNS
-x-complete: 1
+x-complete: 0
 info:
-  title: Google Cloud DNS
-  description: configures-and-serves-authoritative-dns-records-
+  title: Google Cloud DNS API Get Managed Zone Change
+  description: Fetch the representation of an existing Change.
   contact:
     name: Google
     url: https://google.com
@@ -166,35 +167,17 @@ paths:
           description: OK
       tags:
       - Managed Zone
-  /{project}/managedZones/{managedZone}/rrsets:
-    get:
-      summary: Get Managed Zone Resources
-      description: Enumerate ResourceRecordSets that have been created but not yet
-        deleted.
-      operationId: dns.resourceRecordSets.list
-      x-api-path-slug: projectmanagedzonesmanagedzonerrsets-get
-      parameters:
-      - in: path
-        name: managedZone
-        description: Identifies the managed zone addressed by this request
-      - in: query
-        name: maxResults
-        description: Optional
-      - in: query
-        name: name
-        description: Restricts the list to return only records with this fully qualified
-          domain name
-      - in: query
-        name: pageToken
-        description: Optional
-      - in: path
-        name: project
-        description: Identifies the project addressed by this request
-      - in: query
-        name: type
-        description: Restricts the list to return only records of this type
-      responses:
-        200:
-          description: OK
-      tags:
-      - Managed Zone
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---

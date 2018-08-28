@@ -3,8 +3,8 @@ swagger: "2.0"
 x-collection-name: Google Cloud DNS
 x-complete: 0
 info:
-  title: Google Cloud DNS API Get Managed Zones
-  description: Enumerate ManagedZones that have been created but not yet deleted.
+  title: Google Cloud DNS API Delete Managed Zone
+  description: Delete a previously created ManagedZone.
   contact:
     name: Google
     url: https://google.com
@@ -34,6 +34,42 @@ paths:
       - in: query
         name: pageToken
         description: Optional
+      - in: path
+        name: project
+        description: Identifies the project addressed by this request
+      responses:
+        200:
+          description: OK
+      tags:
+      - Managed Zone
+    post:
+      summary: Create Managed Zone
+      description: Create a new ManagedZone.
+      operationId: dns.managedZones.create
+      x-api-path-slug: projectmanagedzones-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: project
+        description: Identifies the project addressed by this request
+      responses:
+        200:
+          description: OK
+      tags:
+      - Managed Zone
+  /{project}/managedZones/{managedZone}:
+    delete:
+      summary: Delete Managed Zone
+      description: Delete a previously created ManagedZone.
+      operationId: dns.managedZones.delete
+      x-api-path-slug: projectmanagedzonesmanagedzone-delete
+      parameters:
+      - in: path
+        name: managedZone
+        description: Identifies the managed zone addressed by this request
       - in: path
         name: project
         description: Identifies the project addressed by this request
